@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <TemplateURL>https://raw.githubusercontent.com/Kieffer87/unraid-templates/master/overseerr.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>Downloaders: MediaApp:Video</Category>
+  <Name>overseerr</Name>
+  <Description>
+    Overseerr is a free and open source software application for managing requests for your media library. It integrates with your existing services such as Sonarr, Radarr and Plex!
+  </Description>
+  <Overview>
+    Overseerr is a free and open source software application for managing requests for your media library. It integrates with your existing services such as Sonarr, Radarr and Plex!  </Overview>
+  <Registry>https://hub.docker.com/r/sctx/overseerr</Registry>
+  <GitHub>https://github.com/sct/overseerr</GitHub>
+  <Repository>sctx/overseerr</Repository>
+  <Project>https://overseerr.dev/</Project>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5055</HostPort>
+        <ContainerPort>5055</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>LOG_LEVEL</Name>
+      <Value>info</Value>
+    </Variable>
+    <Variable>
+      <Name>TZ</Name>
+      <Value>America/Chicago</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/overseerr/config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8989]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/sct/overseerr/develop/public/os_logo_square.png</Icon>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
+</Containers>
