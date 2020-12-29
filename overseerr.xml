@@ -1,26 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <Container version="2">
   <Name>overseerr</Name>
-  <Repository>sctx/overseerr</Repository>
+  <Repository>https://hub.docker.com/r/sctx/overseerr</Repository>
   <Registry>https://hub.docker.com/r/sctx/overseerr</Registry>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support></Support>
+  <Support/>
   <Project>https://overseerr.dev/</Project>
   <Overview>Overseerr is a free and open source software application for managing requests for your media library. It integrates with your existing services such as Sonarr, Radarr and Plex!</Overview>
-  <Category>Downloaders: MediaApp:Video</Category>
-  <WebUI>http://[IP]:[PORT:5055]/</WebUI>
-  <TemplateURL></TemplateURL>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:5055]</WebUI>
+  <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/sct/overseerr/develop/public/os_logo_square.png</Icon>
   <ExtraParams>--restart unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
+  <DateInstalled>1609203901</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
   <Description>Overseerr is a free and open source software application for managing requests for your media library. It integrates with your existing services such as Sonarr, Radarr and Plex!</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5055</HostPort>
+        <ContainerPort>5055</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/docker/overseerr/config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>info</Value>
+      <Name>LOG_LEVEL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>America/Chicago</Value>
+      <Name>TZ</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
   <Labels/>
-  <Config Name="Persistent Data Storage" Target="/config" Default="/mnt/user/appdata/docker/overseerr/config" Mode="rw" Description="/config" Type="Path" Display="always" Required="true" Mask="false"/>
-  <Config Name="HTTP Web Port" Target="5055" Default="5055" Mode="tcp" Description="HTTP Web Port" Type="Port" Display="always" Required="true" Mask="false"/>
-  <Config Name="Log Level" Target="LOG_LEVEL" Default="info" Description="Logging Level" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="Time Zone" Target="TZ" Default="America/Chicago" Description="Timezone" Type="Variable" Display="always" Required="true" Mask="false"/>
-
+  <Config Name="Persistent Storage" Target="/config" Default="/mnt/user/appdata/docker/overseerr/config" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/docker/overseerr/config</Config>
+  <Config Name="Web Port" Target="5055" Default="5055" Mode="tcp" Description="Container Port: 5055" Type="Port" Display="always" Required="true" Mask="false">5055</Config>
+  <Config Name="Log Level" Target="LOG_LEVEL" Default="info" Mode="" Description="Container Variable: LOG_LEVEL" Type="Variable" Display="always" Required="false" Mask="false">info</Config>
+  <Config Name="Timezone" Target="TZ" Default="" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="true" Mask="false">America/Chicago</Config>
 </Container>
