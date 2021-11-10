@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>NZBGet-InfluxDB-Exporter</Name>
+  <Repository>twod/docker-nzbget-influxdb-exporter</Repository>
+  <Registry>https://hub.docker.com/repository/docker/twod/docker-nzbget-influxdb-exporter</Registry>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/kieffer87/docker-nzbget-influxdb-exporter</Project>
+  <Overview>Export NZBGet metrics to InfluxDB</Overview>
+  <Category>Tools:Utilities Network:Management Status:Stable</Category>
+  <WebUI/>
+  <TemplateURL>Kieffer87/unraid-templates/main/NZBGet-InfluxDB-Exporter.xml</TemplateURL>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <Description>Export NZBGet metrics to InfluxDB</Description>
+  <Labels/>
+  <Network>bridge</Network>
+  <Config Name="NZBGet RestrictedUser Name" Target="NZBGET_USERNAME" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="NZBGet RestrictedUser Password" Target="NZBGET_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="NZBGet URL" Target="NZBGET_URL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="NZBGet SSL" Target="NZBGET_URL_SSL" Default="http" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="NZBGet Port" Target="NZBGET_PORT" Default="6789" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="NZBGet Values to Return" Target="NZBGET_VALUES_TO_RETURN" Default="RemainingSizeMB,ForcedSizeMB,DownloadedSizeMB,ArticleCacheMB,DownloadRate,ThreadCount,PostJobCount,ParJobCount,FreeDiskSpaceMB" Mode="" Description="Comma delimited list of API values to return" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="InfluxDB Token" Target="INFLUXDB_TOKEN" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="InfluxDB Org" Target="INFLUXDB_ORG" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="InfluxDB URL" Target="INFLUXDB_URL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="InfluxDB SSL" Target="INFLUXDB_URL_SSL" Default="http" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="InfluxDB Port" Target="INFLUXDB_PORT" Default="8086" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="InfluxDB Bucket" Target="INFLUXDB_BUCKET" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Collection Frequency (CRON)" Target="CRON_SCHEDULE" Default="* * * * *" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+</Container>
