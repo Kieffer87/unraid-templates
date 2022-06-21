@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>CUPS</Name>
+  <Repository>twod/docker-cups</Repository>
+  <Registry>https://hub.docker.com/repository/docker/twod/docker-cups</Registry>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support/>
+  <Project>https://github.com/kieffer87/docker-cups</Project>
+  <Overview>CUPS print server with AirPrint support</Overview>
+  <Category>Tools:Utilities Network:Management Status:Stable</Category>
+  <WebUI/>
+  <TemplateURL>Kieffer87/unraid-templates/master/templates/cups-avahi-airprint.xml</TemplateURL>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <Description>CUPS print server with AirPrint support</Description>
+  <Labels/>
+  <Network>host</Network>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/docker/cups/config" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/docker/cups/config</Config>
+  <Config Name="Services" Target="/services" Default="/mnt/user/appdata/docker/cups/services" Mode="rw" Description="Container Path: /services" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/docker/cups/services</Config>
+  <Config Name="Port" Target="631" Default="631" Mode="tcp" Description="Container Port: 631" Type="Port" Display="always" Required="true" Mask="false">631</Config>
+  <Config Name="Admin Username" Target="CUPSADMIN" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Admin Password" Target="CUPSPASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="true"/>
+</Container>
