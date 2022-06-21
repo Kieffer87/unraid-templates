@@ -11,7 +11,7 @@
   <Overview>CUPS print server with AirPrint support</Overview>
   <Category>Tools:Utilities Network:Management Status:Stable</Category>
   <WebUI/>
-  <TemplateURL>Kieffer87/unraid-templates/master/templates/cups-avahi-airprint.xml</TemplateURL>
+  <TemplateURL>Kieffer87/unraid-templates/master/cups-avahi-airprint.xml</TemplateURL>
   <Icon/>
   <ExtraParams/>
   <PostArgs/>
