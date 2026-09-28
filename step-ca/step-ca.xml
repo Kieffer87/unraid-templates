@@ -7,7 +7,7 @@
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
 
-  <Icon>https://raw.githubusercontent.com/simonlehmann/unraid-templates/main/step-ca/icon.svg</Icon>
+  <Icon>https://raw.githubusercontent.com/smallstep/certificates/master/icon.png</Icon>
 
   <!-- step-ca has no HTML dashboard - this hits its JSON health endpoint over HTTPS -->
   <WebUI>https://[IP]:[PORT:9000]/health</WebUI>
